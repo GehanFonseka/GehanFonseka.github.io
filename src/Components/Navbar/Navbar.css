@@ -1,0 +1,35 @@
+.navbar img {
+    margin-top: auto;
+    width: 209px; /* Ensure you have px for units */
+    height: 127px; /* Ensure you have px for units */
+    margin-left: -120px; /* Adjust this value as needed to move the logo left */
+}
+
+.navbar {  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+.nav-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #da7c25 0.36%, #B923e1 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-right: -140px; /* Adjust this value as needed to move the button right */
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
