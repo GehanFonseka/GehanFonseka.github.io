@@ -32,7 +32,7 @@
 
 .footer-email-input{
     display: flex;
-    gap: 30px;
+    gap: 0px;
     padding: 20px 30px;
     border-radius: 50px;
     background: #32323B;
@@ -52,7 +52,7 @@
 .footer-subscribe{
     
     font-size: 20px;
-    padding: 22px 50px;
+    padding: 22px 40px;
     border-radius: 50px;
     background: linear-gradient(264deg,#DF8908 -5.09%, #B415FF 106.28%);
     transition: 0.3s;
@@ -77,4 +77,19 @@
 .footer-subscribe:hover{
     transform: scale(1.1);
     transition: 0.3s;
+}
+@media(max-width:768px){
+    .footer{
+        margin: 50px 70px;
+
+    }
+    .footer-top{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .footer-bottom{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
 }

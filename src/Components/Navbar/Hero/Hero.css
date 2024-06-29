@@ -1,4 +1,4 @@
-.hero{
+.hero {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -8,34 +8,38 @@
 
 .hero img {
     margin-top: 100px;
-    width: 16%; /* Change this to your desired width */
-    height: 240px; /* Change this to your desired height */
-    object-fit: cover; /* This ensures the image covers the given dimensions */
-    border-radius: 150%; /* This makes the image circular if you want */
-  }
-  
-.hero h1{
+    width: 16%;
+    /* Change this to your desired width */
+    height: 240px;
+    /* Change this to your desired height */
+    object-fit: cover;
+    /* This ensures the image covers the given dimensions */
+    border-radius: 150%;
+    /* This makes the image circular if you want */
+}
+
+.hero h1 {
     text-align: center;
     width: 70%;
     font-size: 50px;
     font-weight: 600;
 }
 
-.hero h1 span{
+.hero h1 span {
     background: linear-gradient(270deg, #df8908 10%, #B415FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero p{
+.hero p {
     width: 50%;
     text-align: center;
     font-size: 24px;
-    line-height: 40px;  
+    line-height: 40px;
 }
 
-.hero-action{
+.hero-action {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -44,24 +48,61 @@
     margin-bottom: 50px;
 }
 
-.hero-connect{
+.hero-connect {
     padding: 25px 45px;
     border-radius: 50px;
     background: linear-gradient(264deg, #df8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
 }
 
-.hero-resume{
+.hero-resume {
     padding: 25px 75px;
     border-radius: 50px;
     border: 2px solid #FFF;
     cursor: pointer;
 }
 
-.hero-connect:hover{
+.hero-connect:hover {
     border: 2px solid #FFF;
 }
 
-.hero-resume:hover{
+.hero-resume:hover {
     border-color: #B415FF;
+}
+
+@media(max-width:798px) {
+    .hero img {
+        margin-top: 20px;
+        width: 260px;
+    }
+
+    .hero h1 {
+        margin-top: 30px;
+        width: 90%;
+        font-size: 50px;
+    }
+
+    .hero p {
+        width: 60%;
+        font-size: 18px;
+        line-height: 32px;
+        margin: 10px 0px;
+    }
+
+    .hero-action{
+        gap: 16;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+
+    .hero-connect{
+        padding: 20px 30px;
+        border-radius: 40px;
+        }
+
+    .hero-resume{
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
 }
