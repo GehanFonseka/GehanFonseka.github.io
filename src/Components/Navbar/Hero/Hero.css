@@ -7,10 +7,10 @@
 
 
 .hero img {
-    margin-top: 100px;
-    width: 16%;
+    margin-top: 80px;
+    width: 19.2%;
     /* Change this to your desired width */
-    height: 240px;
+    height: 290px;
     /* Change this to your desired height */
     object-fit: cover;
     /* This ensures the image covers the given dimensions */
@@ -21,7 +21,7 @@
 .hero h1 {
     text-align: center;
     width: 70%;
-    font-size: 50px;
+    font-size: 90px;
     font-weight: 600;
 }
 
@@ -70,13 +70,15 @@
     border-color: #B415FF;
 }
 
-@media(max-width:798px) {
+@media(max-width:768px) {
     .hero img {
         margin-top: 20px;
-        width: 260px;
+        width: 250px;
     }
 
     .hero h1 {
+        display: flex;
+        flex-direction: column;
         margin-top: 30px;
         width: 90%;
         font-size: 50px;

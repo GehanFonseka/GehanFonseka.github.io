@@ -83,7 +83,7 @@
     }
     .mywork-title img{
         width: 130px;
-        margin-right: -20px;
+        margin-right: 120px;
     }
     .mywork-container{
         grid-template-columns: 1fr 1fr;

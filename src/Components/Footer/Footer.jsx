@@ -8,15 +8,10 @@ const Footer = () => {
     <div className='footer'>
         <div className="footer-top">
             <div className="footer-top-left">
-                <img src={footer_logo} alt="" />
-                <p>I am a software developer,a dedicated and enthusiastic Undergraduate Student at SLIIT.</p>
+
             </div>
             <div className="footer-top-right">
-                <div className="footer-email-input">
-                    <img src={user_icon} alt="" />
-                    <input type="email" placeholder='Enter your email' />
-                </div>
-                <div className="footer-subscribe">Subscribe</div>
+                
             </div>
         </div>
         <hr/>

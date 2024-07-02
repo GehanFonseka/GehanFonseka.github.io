@@ -37,6 +37,7 @@
 }
 
 .nav-menu li img{
+    
     width: 37px; /* Ensure you have px for units */
     height: 12px;
     display: flex;
@@ -56,7 +57,11 @@
 
 @media(max-width:768px){
     .navbar{
-        margin: 20px 50px;
+        
+        margin: 30px 50px;
+    }
+    .logo{
+        display: none;
     }
 
     .nav-connect{
