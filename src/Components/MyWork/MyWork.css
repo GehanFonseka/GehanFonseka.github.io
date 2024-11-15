@@ -1,102 +1,161 @@
-.mywork{
+/* My Work Section */
+.mywork {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    gap: 60px;
+    margin: 60px 100px;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+    padding-bottom: 100px; /* Ensures the section fills fully on mobile */
 }
 
-.mywork-title{
+/* Title Styling */
+.mywork-title {
     position: relative;
 }
 
-.mywork-title h1{
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
+.mywork-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    animation: slideUpFadeIn 1.2s ease forwards, pulse 2.5s ease-in-out infinite;
 }
 
-.mywork-title img{
+.mywork-title img {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: -10px;
+    width: 150px;
     z-index: -1;
+    opacity: 0.6;
 }
 
-.mywork-container{
+/* Work Container */
+.mywork-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.mywork-container img{
-    box-sizing: border-box;
-    width: 419px;
-    height: 280px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.mywork-container img:hover{
-    transform: scale(1.10);
-    border: 4px solid #ff00ff;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.mywork-showmore{
+/* Card with modern border styling */
+.mywork-card {
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
+    border-radius: 15px; /* Modern rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow effect */
+    border: 2px solid #00b4d8; /* Thin blue border for a clean look */
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
     display: flex;
-    gap: 15px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding: 30px 60px;
-    font-size: 22px;
+    flex-direction: column; /* To make sure the content inside the card stacks vertically */
+    transition: all 0.3s ease-in-out; /* Smooth transition for the hover effects */
+}
+
+/* Card Hover Effect */
+.mywork-card:hover {
+    transform: translateY(-10px); /* Lifts the card slightly */
+    box-shadow: 0 8px 30px rgba(0, 180, 216, 0.4); /* Increased shadow for depth */
+    border-color: #00b4d8; /* Brightens the border on hover */
+}
+
+/* Ensure the image fills top area and project details fill remaining space */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0; /* Matching rounded corners */
+    transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+/* Image Hover Effect */
+.mywork-card:hover .project-image {
+    transform: scale(1.05); /* Slightly zooms in the image */
+}
+
+/* Project Details Styling */
+.project-details {
+    padding: 20px;
+    background-color: #000000; /* Full black background */
+    border-radius: 0 0 15px 15px; /* Matches card's border-radius */
+    flex-grow: 1; /* Ensures this section fills available space */
+}
+
+.project-details h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #00b4d8;
+}
+
+.project-details p {
+    font-size: 1rem;
+    margin: 10px 0 0;
+    color: #e0e0e0;
+}
+
+/* Show More Button */
+.mywork-showmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 40px;
+    font-size: 1.1rem;
     font-weight: 500;
-    margin-bottom: 80px;
-    transition: 0.6s;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #00b4d8;
+    border-radius: 50px;
     cursor: pointer;
-
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
 }
 
-.mywork-showmore:hover{
-    gap: 30px;
-    transition: 0.6s;
-    
+.mywork-showmore:hover {
+    background-color: #00b4d8;
+    color: #ffffff;
+    padding: 15px 50px;
 }
 
-.mywork-showmore p{
-    font-size:medium;
+.mywork-showmore p {
+    font-size: medium;
 }
 
-@media(max-width:768px){
-    .mywork{
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .mywork {
         gap: 50px;
-        margin: 50px 70px;
-        align-items: start;
+        margin: 40px 20px;
+        align-items: center;
+        background-color: #1a1a1a; /* Ensures full black background on mobile */
+        padding-bottom: 0; /* Remove bottom padding */
+    }
 
+    .mywork-title h1 {
+        font-size: 2rem;;
+        
     }
-    .mywork-title h1{
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
+
+    .mywork-title img {
+        width: 100px;
+        right: -10px;
     }
-    .mywork-title img{
-        width: 130px;
-        margin-right: 120px;
-    }
-    .mywork-container{
+
+    .mywork-container {
         grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        gap: 20px;
     }
-    .mywork-container img{
-        width: 100%;
-        height: 100%;
+
+    .mywork-showmore {
+        padding: 15px 30px;
+        font-size: 1rem;
+        margin: 30px auto;
     }
-    .mywork-showmore{
-        padding: 20px 40px;
-        font-size: 18px;
-        margin: 50px auto;
-        cursor: pointer;
+
+    /* Adjust project details background to full black */
+    .project-details {
+        background-color: #000000; /* Full black background */
     }
 }

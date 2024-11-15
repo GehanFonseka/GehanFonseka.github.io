@@ -4,6 +4,7 @@ import mail_icon from '../../assets/mail_icon.svg';
 import location_icon from '../../assets/location_icon.svg';
 import call_icon from '../../assets/call_icon.svg';
 import theme_pattern from '../../assets/theme_pattern.svg'; 
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -35,7 +36,7 @@ const Contact = () => {
         <div id='contact' className='contact'>
             <div className="contact-title">
                 <h1>Get in touch</h1>
-                <img src={theme_pattern} alt="Theme Pattern" />
+                
             </div>
             <div className="contact-section">
                 <div className="contact-left">
@@ -54,6 +55,11 @@ const Contact = () => {
                             <img src={location_icon} alt="Location Icon" />
                             <p>Colombo, Sri Lanka</p>
                         </div>
+                        <div className="social-icon">
+        <a href="https://github.com/GehanFonseka" target="_blank" rel="noopener noreferrer"><FaGithub /> </a>
+        <a href="https://www.instagram.com/gehan_fonseka_?igsh=MWI3eDYzamx2bzIzYQ==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+        <a href="https://www.linkedin.com/in/gehan-fonseka-aa61a7288" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+      </div>
                     </div>
                 </div>
                 <form onSubmit={onSubmit}className="contact-right">

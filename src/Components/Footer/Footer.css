@@ -78,90 +78,148 @@
     transform: scale(1.1);
     transition: 0.3s;
 }
-@media(max-width:768px){
-    @media(max-width: 768px) {
-        .footer-top-left img {
-            margin-top: auto;
-            width: 100px; /* Adjusted for smaller screens */
-            height: 70px; /* Adjusted for smaller screens */
-        }
-    
-        .footer {
-            margin: 20px 10px; /* Adjusted for smaller screens */
-            display: flex;
-            flex-direction: column;
-            gap: 20px; /* Adjusted for smaller screens */
-        }
-    
-        .footer-top {
-            display: flex;
-            flex-direction: column; /* Changed to column for smaller screens */
-            gap: 20px; /* Adjusted for smaller screens */
-        }
-    
-        .footer-top-left p {
-            font-size: 16px; /* Adjusted for smaller screens */
-            max-width: 100%; /* Adjusted to fit screen width */
-        }
-    
-        .footer-top-right {
-            display: flex;
-            flex-direction: column; /* Changed to column for smaller screens */
-            margin-top: 20px; /* Adjusted for smaller screens */
-            align-items: center;
-            gap: 20px; /* Adjusted for smaller screens */
-        }
-    
-        .footer-email-input {
-            display: flex;
-            flex-direction: column; /* Changed to column for smaller screens */
-            gap: 15px; /* Adjusted for smaller screens */
-            padding: 15px 20px; /* Adjusted for smaller screens */
-            border-radius: 25px; /* Adjusted for smaller screens */
-            background: #32323B;
-            padding-right: 20px; /* Adjusted for smaller screens */
-            width: 0%; /* Reduced to 70% of original size */
-        }
-        .footer-email-input input {
-            outline: none;
-            border: none;
-            background: transparent;
-            color: #a0a0a0;
-            font-family: Outfit;
-            font-size: 16px; /* Adjusted for smaller screens */
-        }
-    
-        .footer-subscribe {
-            font-size: 18px; /* Adjusted for smaller screens */
-            padding: 15px 30px; /* Adjusted for smaller screens */
-            border-radius: 25px; /* Adjusted for smaller screens */
-            background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
-            transition: 0.3s;
-        }
-    
-        .footer-bottom {
-            display: flex;
-            flex-direction: column; /* Changed to column for smaller screens */
-            align-items: center;
-            font-size: 16px; /* Adjusted for smaller screens */
-            gap: 15px; /* Adjusted for smaller screens */
-        }
-    
-        .footer-bottom-right {
-            display: flex;
-            flex-direction: column; /* Changed to column for smaller screens */
-            gap: 20px; /* Adjusted for smaller screens */
-            margin-bottom: 20px; /* Adjusted for smaller screens */
-        }
-    
-        .footer-email-input:hover {
-            border: 2px solid white;
-        }
-    
-        .footer-subscribe:hover {
-            transform: scale(1.1);
-            transition: 0.3s;
-        }
+@media(max-width: 768px) {
+    /* General Footer Styles */
+    .footer {
+        margin: 20px 15px; /* Adjusted for better spacing */
+        padding: 20px; /* Add some padding for spacing */
+        display: flex;
+        flex-direction: column;
+        gap: 30px; /* Increased gap for better layout */
+        background-color: #1A1A1A; /* Dark background for contrast */
+        color: #F1F1F1; /* Light text color for readability */
+        border-radius: 12px; /* Rounded corners for modern look */
+        
+    }
+
+    /* Footer Top Section */
+    .footer-top {
+        display: flex;
+        flex-direction: column; /* Change to column for better alignment */
+        gap: 20px; /* Add space between elements */
+        text-align: center; /* Center-align the content */
+    }
+
+    .footer-top-left img {
+        width: 100px; /* Logo size for mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space below the logo */
+    }
+
+    .footer-top-left p {
+        font-size: 16px; /* Smaller text for mobile */
+        line-height: 1.5;
+        max-width: 90%; /* Limit width for better text wrapping */
+        margin: 0 auto; /* Center the paragraph */
+        color: #B0B0B0; /* Lighter text color for the paragraph */
+        text-align: center; /* Ensure text is centered inside the paragraph */
     }
     
+
+    /* Footer Top Right Section */
+    .footer-top-right {
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center-align the items */
+        gap: 15px;
+        margin-top: 15px; /* Add top margin for spacing */
+        text-align: center;
+    }
+
+    /* Email Input */
+    .footer-email-input {
+        display: flex;
+        flex-direction: row; /* Row layout for input and button */
+        gap: 10px; /* Space between input and button */
+        padding: 12px 18px;
+        border-radius: 30px; /* Rounded corners for input */
+        background-color: #32323B; /* Dark background for input */
+        width: 80%; /* Set width to 80% of the container */
+        max-width: 400px; /* Limit max width for better fitting */
+        margin: 0 auto; /* Center the input */
+        text-align: center;
+    }
+
+    .footer-email-input input {
+        outline: none;
+        border: none;
+        background: transparent;
+        color: #F1F1F1;
+        font-size: 16px;
+        flex: 1; /* Make the input take up available space */
+        padding: 10px; /* Add padding for better input area */
+        text-align: center;
+    }
+
+    .footer-email-input:hover {
+        border: 2px solid #00B4D8; /* Light blue border on hover */
+        text-align: center;
+    }
+
+    /* Subscribe Button */
+    .footer-subscribe {
+        font-size: 16px; /* Adjust font size */
+        padding: 14px 25px;
+        border-radius: 30px; /* Rounded corners for button */
+        background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        text-align: center; /* Center button text */
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .footer-subscribe:hover {
+        transform: scale(1.05); /* Slight scaling effect */
+        background-color: #B415FF; /* Change background color on hover */
+    }
+
+    /* Footer Bottom Section */
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px; /* Smaller font size for mobile */
+        gap: 15px;
+        color: #A0A0A0; /* Slightly lighter color for footer text */
+        text-align: center;
+    }
+
+    .footer-bottom-right {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Footer Links */
+    .footer-bottom-right a {
+        color: #A0A0A0;
+        text-decoration: none;
+        font-weight: 500; /* Slightly bolder text for readability */
+        transition: color 0.3s ease;
+    }
+
+    .footer-bottom-right a:hover {
+        color: #F1F1F1; /* White text color on hover */
+    }
+
+    /* Social Media Icons */
+    .footer-social-icons {
+        display: flex;
+        gap: 20px;
+        font-size: 1.6rem;
+        justify-content: center;
+    }
+
+    .footer-social-icons a {
+        color: #A0A0A0;
+        transition: color 0.3s ease;
+    }
+
+    .footer-social-icons a:hover {
+        color: #DF8908; /* Highlight icons on hover */
+    }
 }

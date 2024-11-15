@@ -1,0 +1,139 @@
+.certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    padding: 50px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.certifications h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    margin-top: -95px;
+}
+
+.certifications p {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    margin-bottom: 40px;
+}
+
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.certificate-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: scale(1.05);
+}
+
+.certificate-image {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.certificate-card:hover .certificate-image {
+    box-shadow: 0 6px 15px rgba(0, 180, 216, 0.6);
+}
+
+.certificate-title {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Show More Button */
+.certificate-showmore {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #00b4d8;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    text-decoration: none;
+    outline: none;
+    margin-top: 20px;
+}
+
+.certificate-showmore:hover {
+    background-color: #00b4d8;
+    color: #ffffff;
+    padding: 10px 35px;
+}
+
+.certificate-showmore .arrow {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.certificate-showmore:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .certificate-grid {
+        grid-template-columns: repeat(2, 1fr); /* Display two columns in a row */
+        gap: 20px; /* Adjust the gap if needed */
+    }
+
+    .certifications h1 {
+        font-size: 2rem;
+        margin-top: -35px;
+    }
+
+    .certifications p {
+        font-size: 1rem;
+    }
+
+    .certificate-card {
+        align-items: center; /* Ensure content stays centered in the card */
+    }
+
+    .certificate-image {
+        width: 100%; /* Make the image take the full width of the card */
+        height: 230px; /* Set a fixed height for all images */
+        object-fit: cover; /* Crop the image to maintain aspect ratio */
+        border-radius: 10px; /* Optional: Add rounded corners to the image */
+    }
+
+    .certificate-showmore {
+        padding: 15px 30px;
+        font-size: 1rem;
+        margin: 30px auto;
+    }
+}
+
+

@@ -1,7 +1,8 @@
 import React from 'react'
 import './Footer.css'
-import footer_logo from '../../assets/Logo(3).png'
+import footer_logo from '../../assets/gf5.png'
 import user_icon from '../../assets/user_icon.svg'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -22,6 +23,7 @@ const Footer = () => {
                 <p>Privacy Policy</p>
                 <p>Connect with me</p>
             </div>
+           
         </div>
 
 

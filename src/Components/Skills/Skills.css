@@ -1,0 +1,161 @@
+/* LanguagesAndFrameworks.css */
+
+.Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 50px;
+    background-color: #1a1a1a;
+    background-image: url('path/to/your/star-background.png'); /* Replace with your background path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    opacity: 0; /* Start with hidden */
+    animation: fadeIn 1s ease forwards, slideInFromBottom 1s ease forwards; /* Fade-in and slide-in animations for the whole section */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.Skills h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+    animation: slideUpFadeIn 1.2s ease forwards, pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.Skills p {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.6s; /* Delay after the heading */
+}
+
+/* Animate icon grid appearance */
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards, slideInFromLeft 1s ease-out forwards;
+    animation-delay: 1s; /* Delay after the paragraph */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.icon-grid img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(0%);
+    opacity: 0;
+    animation: fadeInIcons 0.8s ease-out forwards; /* Adding a fade-in animation for each icon */
+    animation-delay: calc(0.5s + (var(--i) * 0.1)); /* Staggered animation based on index */
+}
+
+@keyframes fadeInIcons {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Hover effect on icons */
+.icon-grid img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .Skills {
+        padding: 30px;
+    }
+
+    .Skills h1 {
+        font-size: 2rem;
+    }
+
+    .Skills p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(4, 1fr); /* Display 4 columns on tablets */
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .icon-grid img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Skills h1 {
+        font-size: 1.8rem;
+    }
+
+    .Skills p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(3, 1fr); /* Display 3 columns on smaller mobile screens */
+        gap: 10px;
+    }
+
+    .icon-grid img {
+        width: 40px;
+        height: 40px;
+    }
+}

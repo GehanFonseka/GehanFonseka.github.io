@@ -1,173 +1,293 @@
-.contact{
+/* Contact Section */
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
-
+    gap: 60px;
+    margin: 60px 100px;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
 }
 
-.contact-title{
+/* Title Styling */
+.contact-title {
     position: relative;
+    text-align: center;
 }
 
-.contact-title h1{
-    padding: 0px 30px;
-    font-size: 80px;
-    font-weight: 600;
+.contact-title h1 {
+    padding: 0px 20px;
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    animation: slideUpFadeIn 1.2s ease forwards, pulse 2.5s ease-in-out infinite;
 }
 
-.contact-title img{
+.contact-title img {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -10px;
+    right: -10px;
+    width: 150px;
     z-index: -1;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
 }
 
-.contact-section{
+.contact-title img:hover {
+    opacity: 1;
+}
+
+/* Contact Content Layout */
+.contact-section {
     display: flex;
-    gap: 150px;
+    gap: 80px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.contact-left{
+.contact-left {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
+    flex: 1;
 }
 
-.contact-left h1{
-    font-size: 80px;
+.contact-left h1 {
+    font-size: 2.4rem;
     font-weight: 700;
-    background: linear-gradient(270deg, #df8908 80%, #B415FF 100%);
+    background: linear-gradient(270deg, #00b4d8 50%, #0077a3 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
-.contact-left p{
-    max-width: 550px;
+.contact-left p {
+    max-width: 500px;
     color: #d8d8d8;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
 
-.contact-details{
+/* Contact Details Styling */
+.contact-details {
     display: flex;
     flex-direction: column;
-    color: #d8d8d8;
-    gap: 30px;
-    font-size: 22px;
+    gap: 15px;
+    font-size: 1.2rem;
+    color: #b0b0b0;
 }
 
-.contact-detail{
+.contact-detail {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    color: #e0e0e0;
 }
 
-.contact-right{
+/* Right Contact Form */
+.contact-right {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 30px;
+    gap: 15px;
+    flex: 1;
 }
 
-.contact-right label{
-    color: #d8d8d8;
-    font-size: 22px;
+.contact-right label {
+    color: #e0e0e0;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
-.contact-right input{
+.contact-right input,
+.contact-right textarea {
     border: none;
-    width: 700px;
-    height: 78px;
-    padding-left: 20px;
-    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 10px;
     background: #32323c;
     color: #a0a0a0;
-    font-family: Outfit;
-    font-size: 20px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-.contact-right textarea{
-    width: 650px;
-    border: none;
-    padding: 25px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #a0a0a0;
-    font-family: Outfit;
-    font-size: 20px;
+.contact-right input:focus,
+.contact-right textarea:focus {
+    outline: none;
+    background: #42424c;
+    border: 2px solid #00b4d8;
 }
 
-.contact-submit{
+.contact-right textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Submit Button Styling */
+.contact-submit {
     border: none;
-    color: white;
+    color: #ffffff;
     border-radius: 50px;
-    background: linear-gradient(264deg,#DF8908 -5.09%, #B415FF 106.28%);
-    font-size: 22px;
-    padding: 20px 60px;
-    margin-bottom: 50px;
-    cursor:pointer;
-    transition: 0.3s;
+    background: linear-gradient(264deg, #00b4d8, #0077a3);
+    font-size: 1.2rem;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.contact-submit:hover{
-    transform:scale(1.1);
-    transition: 0.3s;
+.contact-submit:hover {
+    transform: scale(1.05);
+    background: linear-gradient(264deg, #0077a3, #005f7a);
+}
+/* Social Icon Styling */
+.social-icon {
+    display:flex;
+    justify-content: flex-start; /* Center the icons horizontally */
+    gap: 30px; /* Add space between icons */
+    font-size: 2rem; /* Set a consistent size for the icons */
+    margin-top: 20px; /* Add spacing above the icons */
+    padding: 10px; /* Add padding around the icons */
+    flex-wrap: wrap; /* Allow icons to wrap if the screen size is small */
+    
 }
 
-@media(max-width:768px){
-    .contact{
-        gap: 50px;
-        margin: 50px 70px;
-        align-items: start;
+.social-icon a {
+    color: #ffffff; /* Default blue color for the icons */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.social-icon a:hover {
+    color:#007bff; /* Darker blue color when hovering */
+}
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* General container adjustments */
+    .contact {
+        display: flex;
+        flex-direction: column;  /* Stack the form vertically */
+        justify-content: center;
+        align-items: center;
+        gap: 20px; /* Reduced gap between sections */
+        margin: 20px; /* Reduced margin to avoid too much spacing on smaller screens */
+        padding: 20px;
+        width: 100%; /* Ensure full width */
+        height: 130vh; /* Full viewport height to help with vertical centering */
+        box-sizing: border-box; /* Prevent overflow */
     }
 
-    .contact h1{
-        padding: 0;
-        font-size: 50px;
-        font-weight: 600;
+    /* Title adjustments */
+    .contact-title h1 {
+        font-size: 2rem; /* Slightly smaller title for mobile */
+        text-align: center; /* Center title text */
+        margin-bottom: 15px; /* Adequate space under the title */
     }
-    .contact-title img{
-        width: 130px;
-        margin-right: 110px;
-    }
-    .contact-section{
-        flex-direction: column;
 
+    .contact-title img {
+        width: 80px; /* Adjusted size of the image for mobile */
+        margin-top: 10px;
+        margin-bottom: 20px; /* Space below the image */
+        align-self: flex-end; /* Position image to the right */
     }
-    .contact-left h1{
-        font-size: 54px;
-    }
-    .contact-left p{
-        font-size: 18px
 
+    /* Contact section adjustments */
+    .contact-section {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center all items */
+        gap: 20px; /* Moderate gap between items */
+        width: 100%; /* Full width for section */
     }
-    .contact-detail{
-        gap: 20px;
-    }
-    .contact-detail img{
-        width: 25px;
 
+    /* Contact-left content */
+    .contact-left h1 {
+        font-size: 1.8rem; /* Consistent header size */
+        text-align: center; /* Center the header text */
+        margin-bottom: 10px; /* Reduced margin */
     }
-    .contact-right label{
-        font-size: 20px;
 
+    .contact-left p {
+        font-size: 1rem; /* Adjusted paragraph font size */
+        text-align: center; /* Center the text */
+        max-width: 90%; /* Limit the paragraph width to avoid text stretching too far */
+        margin: 0 auto; /* Center paragraph */
     }
-    .contact-right input{
-        width: 100%;
-        font-size: 20px;
+
+    /* Contact details adjustments */
+    .contact-detail {
+        display: flex;
+        flex-direction: column; /* Stack the contact details vertically */
+        gap: 10px; /* Moderate gap between fields */
+        width: 100%; /* Full width for contact details */
+        padding: 0 15px; /* Padding for better spacing */
     }
-    .contact-right textarea{
-        width: 95%;
-        font-size: 20px;
+
+    /* Label adjustments */
+    .contact-right label {
+        font-size: 1rem; /* Consistent label size */
+        margin-bottom: 6px; /* Less space between label and input field */
+        text-align: left; /* Align label to the left */
     }
-    .contact-submit{
-        font-size: 20px;
-        padding: 15px 40px;
+
+    /* Input and textarea adjustments */
+    .contact-right input,
+    .contact-right textarea {
+        font-size: 1rem; /* Consistent font size */
+        padding: 12px; /* Padding for a better user experience */
+        border: 1px solid #ccc;
+        border-radius: 5px; /* Rounded borders for a modern look */
+        width: 120%; /* Ensure inputs take up full width */
+        max-width: 120%; /* Prevent fields from stretching beyond container */
+        box-sizing: border-box; /* Ensures padding doesn't overflow */
+    }
+
+    /* Textarea specific styling */
+    .contact-right textarea {
+        resize: vertical; /* Allow vertical resize for the textarea */
+        min-height: 100px; /* Set a minimum height for the textarea */
+    }
+
+    /* Submit button adjustments */
+    .contact-submit {
+        font-size: 1.1rem; /* Slightly larger font size for the button */
+        padding: 12px 30px;
+        background-color: #007bff; /* Blue background for the button */
+        color: white;
+        border: none;
+        border-radius: 5px; /* Rounded corners for the button */
+        cursor: pointer;
+        width: 120%; /* Full width button for mobile */
+        max-width: 300px; /* Limit max-width of the button */
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+        margin-top: 20px; /* Space above the submit button */
+    }
+
+    .contact-submit:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+    /* Social icons section */
+    .social-icon {
+        display: flex;
+        justify-content: center; /* Center the icons */
+        align-items: center; /* Align icons in the center */
+        gap: 20px; /* Space between each icon */
+        font-size: 2rem; /* Adjust size of icons */
+        margin-top: 20px; /* Space above the icons */
+        padding: 10px; /* Padding around the icons */
+    }
+
+    .social-icon a {
+        color: #007bff; /* Blue color for social icons */
+        transition: color 0.3s ease; /* Smooth color change */
+    }
+
+    .social-icon a:hover {
+        color: #0056b3; /* Darker blue on hover */
     }
 }

@@ -1,110 +1,292 @@
+/* Hero Section */
 .hero {
+    margin-top: 50px;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 35px;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 80px 50px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 30px;
+    position: relative;
+    z-index: 1;
 }
 
 
-.hero img {
-    margin-top: 80px;
-    width: 19.2%;
-    /* Change this to your desired width */
-    height: 290px;
-    /* Change this to your desired height */
-    object-fit: cover;
-    /* This ensures the image covers the given dimensions */
-    border-radius: 150%;
-    /* This makes the image circular if you want */
-}
-
+/* Hero Title Styling */
 .hero h1 {
-    text-align: center;
-    width: 70%;
-    font-size: 90px;
-    font-weight: 600;
+    font-size: 2.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #333333; /* Dark neutral color for the text */
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    animation: pulseColor 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite; /* Combined pulse and scale effect */
 }
 
-.hero h1 span {
-    background: linear-gradient(270deg, #df8908 10%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Keyframes for the pulse effect */
+@keyframes pulseColor {
+    0% {
+        color: #333333; /* Dark grey */
+    }
+    50% {
+        color: #f8fdf9; /* Soft Green */
+    }
+    100% {
+        color: #333333; /* Dark grey */
+    }
 }
+
+/* Keyframes for the scale pulse effect */
+@keyframes scalePulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional: Highlight the span elements with a different color */
+.hero h1 span {
+    color: #00b4d8; /* Light blue */
+}
+
 
 .hero p {
-    width: 50%;
-    text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin: 10px 0 30px;
+    max-width: 85%;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s;
 }
 
 .hero-action {
     display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 50px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hero-connect, .hero-resume {
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .hero-connect {
-    padding: 25px 45px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #df8908 -5.09%, #B415FF 106.28%);
-    cursor: pointer;
-}
-
-.hero-resume {
-    padding: 25px 75px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
+    color: #ffffff;
+    background-color: #00b4d8;
+    border: none;
 }
 
 .hero-connect:hover {
-    border: 2px solid #FFF;
+    background-color: #0077a3;
+}
+
+.hero-resume {
+    color: #e0e0e0;
+    background: none;
+    border: 2px solid #e0e0e0;
 }
 
 .hero-resume:hover {
-    border-color: #B415FF;
+    color: #00b4d8;
+    border-color: #00b4d8;
 }
 
-@media(max-width:768px) {
-    .hero img {
-        margin-top: 20px;
-        width: 250px;
+/* Updated Image Styling */
+.hero-image-container {
+    position: relative;
+    width: 310px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    border: 3px solid #00b4d8; /* Blue border around the container */
+    border-radius: 15px; /* Rounded corners */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hero-image-container:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    border-color: #0077a3; /* Darker blue border on hover */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* Increase transparency */
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.1); /* Scale the image slightly more on hover */
+    filter: grayscale(0%) contrast(1.1); /* Remove grayscale and increase contrast */
+    opacity: 1; /* Fully opaque on hover */
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        text-align: center;
     }
 
-    .hero h1 {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30px;
-        width: 90%;
-        font-size: 50px;
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-top: 20px;
+    }
+
+    .hero-image-container {
+        order: -1;
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+        border-radius: 50%;
+        border: 5px solid #00b4d8;
+        overflow: hidden;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .hero-image {
+        width: 80%;
+        height: 130%;
+        object-fit: cover;
+        opacity: 0.9;
+        transform: scale(0.9);
+        gap: 10px;
+    }
+
+    .hero-image-container:hover .hero-image {
+        transform: scale(1);
     }
 
     .hero p {
-        width: 60%;
-        font-size: 18px;
-        line-height: 32px;
-        margin: 10px 0px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 15px 0;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards;
+        animation-delay: 1s;
     }
 
-    .hero-action{
-        gap: 16;
-        font-size: 18px;
-        font-weight: 500;
-        margin-bottom: 50px;
+    .hero-action {
+        display: flex;
+        justify-content: center; /* Centers buttons horizontally */
+        align-items: center;     /* Aligns buttons vertically */
+        gap: 10px;               /* Space between the buttons */
+        margin-top: 25px;
+        width: 100%;             /* Ensure container spans full width */
+    }
+    
+    .hero-connect, .hero-resume {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+        border-radius: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        width: 158px;              /* Make each button take up 48% of the width */
+    }
+    
+    
+    
+
+    .hero-connect {
+        background-color: #00b4d8;
+        color: #ffffff;
+        border: none;
     }
 
-    .hero-connect{
-        padding: 20px 30px;
-        border-radius: 40px;
-        }
-
-    .hero-resume{
-        padding: 20px 50px;
-        border-radius: 40px;
+    .hero-connect:hover {
+        background-color: #0077a3;
+        color: #ffffff;
+        transform: translateY(-3px);
     }
+
+    .hero-resume {
+        color: #ffffff;
+        background: transparent;
+        border: 2px solid #ffffff;
+    }
+
+    .hero-resume:hover {
+        color: #00b4d8;
+        border-color: #00b4d8;
+        transform: translateY(-3px);
+    }
+}
+
+
+/* Hero section keyframe animations for fade-in and pulse effects */
+.hero h1 {
+    font-size: 2.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #333333; /* Dark neutral color for the text */
+    display: inline;
+    text-align: left;
+    position: relative;
+    animation: pulseColor 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite; /* Combined pulse and scale effect */
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulseColor {
+    0% {
+        color: #333333; /* Dark grey */
+    }
+    50% {
+        color: #f8fdf9; /* Soft Green */
+    }
+    100% {
+        color: #333333; /* Dark grey */
+    }
+}
+
+/* Keyframes for the scale pulse effect */
+@keyframes scalePulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional: Highlight the span elements with a different color */
+.hero h1 span {
+    color: #00b4d8; /* Light blue */
 }
