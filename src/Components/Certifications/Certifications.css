@@ -111,7 +111,7 @@
 
     .certifications h1 {
         font-size: 1.8rem; /* Adjust title size for smaller screens */
-        margin-top: -25px; /* Adjust the margin if needed */
+        margin-top: 5px; /* Adjust the margin if needed */
     }
 
     .certifications p {
@@ -134,5 +134,6 @@
         padding: 12px 25px; /* Adjust padding for smaller buttons */
         font-size: 0.9rem; /* Adjust font size for smaller screens */
         margin: 20px auto;
+        margin-top: 60px;        
     }
 }
