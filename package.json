@@ -2,6 +2,7 @@
   "name": "portfolio-react",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://github.com/GehanFonseka/GehanFonseka.github.io.git",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -27,4 +28,5 @@
     "vite": "^5.3.1",
     "vite-plugin-svgr": "^4.2.0"
   }
+
 }
