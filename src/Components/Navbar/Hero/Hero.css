@@ -21,10 +21,9 @@
     z-index: 1;
 }
 
-
 /* Hero Title Styling */
 .hero h1 {
-    font-size: 2.9rem;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 15px;
@@ -32,7 +31,7 @@
     display: inline-block;
     text-align: left;
     position: relative;
-    animation: pulseColor 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite; /* Combined pulse and scale effect */
+    animation: pulseColor 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite, typing 4s steps(40) 1s forwards; /* Combined animations */
 }
 
 /* Keyframes for the pulse effect */
@@ -61,11 +60,61 @@
     }
 }
 
+/* Keyframes for typing effect */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
 /* Optional: Highlight the span elements with a different color */
 .hero h1 span {
     color: #00b4d8; /* Light blue */
+    animation: colorChange 3s ease-in-out infinite; /* Animated color change on span */
+    font-size: 3.5rem;
 }
 
+/* Keyframes for span color change */
+@keyframes colorChange {
+    0% {
+        color: #00b4d8; /* Light blue */
+    }
+    50% {
+        color: #f8fdf9; /* Soft Green */
+    }
+    100% {
+        color: #00b4d8; /* Light blue */
+    }
+}
+
+/* Hero section cool underline animation */
+.hero h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #00b4d8;
+    bottom: -8px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    animation: underline 1s ease-out forwards;
+}
+
+/* Keyframes for the underline effect */
+@keyframes underline {
+    0% {
+        transform: scaleX(0);
+        transform-origin: bottom left;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: bottom right;
+    }
+}
 
 .hero p {
     font-size: 1.3rem;
@@ -96,6 +145,8 @@
     color: #ffffff;
     background-color: #00b4d8;
     border: none;
+    width: 150px;
+    text-align: center;
 }
 
 .hero-connect:hover {
@@ -106,6 +157,9 @@
     color: #e0e0e0;
     background: none;
     border: 2px solid #e0e0e0;
+    width:140px;
+    text-align: center;
+    
 }
 
 .hero-resume:hover {
@@ -125,12 +179,6 @@
     padding: 10px;
     border: 3px solid #00b4d8; /* Blue border around the container */
     border-radius: 15px; /* Rounded corners */
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.hero-image-container:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
-    border-color: #0077a3; /* Darker blue border on hover */
 }
 
 .hero-image {
@@ -138,17 +186,10 @@
     height: 100%;
     object-fit: cover;
     opacity: 0.9; /* Increase transparency */
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
     border-radius: 10px; /* Rounded corners */
 }
 
-.hero-image-container:hover .hero-image {
-    transform: scale(1.1); /* Scale the image slightly more on hover */
-    filter: grayscale(0%) contrast(1.1); /* Remove grayscale and increase contrast */
-    opacity: 1; /* Fully opaque on hover */
-}
-
-
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -173,31 +214,39 @@
         border-radius: 50%;
         border: 5px solid #00b4d8;
         overflow: hidden;
-        transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     .hero-image {
         width: 80%;
-        height: 130%;
+        height: 115%;
         object-fit: cover;
         opacity: 0.9;
-        transform: scale(0.9);
         gap: 10px;
     }
 
-    .hero-image-container:hover .hero-image {
-        transform: scale(1);
-    }
-
     .hero p {
-        font-size: 1.1rem;
-        line-height: 1.5;
-        max-width: 90%;
-        margin: 15px 0;
-        opacity: 0;
+        font-size: 1.1rem;    
+                /* Adjust font size */
+        line-height: 1.8;               /* Increase line height for more vertical spacing */
+        max-width: 90%;                 /* Limit text width for better readability */
+        margin: 20px 0;                 /* Increased margin for better spacing */
+        opacity: 0;                     /* Fade-in effect (starts hidden) */
         animation: fadeIn 1.5s ease forwards;
         animation-delay: 1s;
+        text-align: center;             /* Center the text */
+        padding: 0 15px;                /* Add horizontal padding for better spacing on small screens */
     }
+    
+    /* Keyframes for fade-in animation */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
 
     .hero-action {
         display: flex;
@@ -207,7 +256,7 @@
         margin-top: 25px;
         width: 100%;             /* Ensure container spans full width */
     }
-    
+
     .hero-connect, .hero-resume {
         font-size: 1.1rem;
         padding: 10px 25px;
@@ -215,16 +264,14 @@
         cursor: pointer;
         text-decoration: none;
         transition: all 0.3s ease;
-        width: 158px;              /* Make each button take up 48% of the width */
+        width: 100%;              /* Both buttons take up 100% width */
     }
-    
-    
-    
 
     .hero-connect {
         background-color: #00b4d8;
         color: #ffffff;
         border: none;
+        height: 40px;
     }
 
     .hero-connect:hover {
@@ -237,6 +284,7 @@
         color: #ffffff;
         background: transparent;
         border: 2px solid #ffffff;
+        height: 40px;
     }
 
     .hero-resume:hover {
@@ -244,49 +292,4 @@
         border-color: #00b4d8;
         transform: translateY(-3px);
     }
-}
-
-
-/* Hero section keyframe animations for fade-in and pulse effects */
-.hero h1 {
-    font-size: 2.9rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 15px;
-    color: #333333; /* Dark neutral color for the text */
-    display: inline;
-    text-align: left;
-    position: relative;
-    animation: pulseColor 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite; /* Combined pulse and scale effect */
-}
-
-/* Keyframes for the pulse effect */
-@keyframes pulseColor {
-    0% {
-        color: #333333; /* Dark grey */
-    }
-    50% {
-        color: #f8fdf9; /* Soft Green */
-    }
-    100% {
-        color: #333333; /* Dark grey */
-    }
-}
-
-/* Keyframes for the scale pulse effect */
-@keyframes scalePulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* Slightly larger */
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Optional: Highlight the span elements with a different color */
-.hero h1 span {
-    color: #00b4d8; /* Light blue */
 }

@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import menu_open from '../../assets/menu_open.svg';
-import menu_close from '../../assets/menu_close.svg';
-import logoImage from '../../assets/gf5.png';
+import logoImage from '../../assets/gf5.png'; // Keep your logo image
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -17,14 +15,18 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <img src={logoImage} alt="Logo" className="navbar-logo" />
-
-      <img
-        src={menuOpen ? menu_close : menu_open}
+      
+      {/* Mobile Toggle Button (using span elements) */}
+      <div
+        className={`nav-mob-toggle ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}
-        alt="Toggle Menu"
-        className="nav-mob-toggle"
-      />
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
+      {/* Navigation Menu */}
       <ul className={`nav-menu ${menuOpen ? 'show' : ''}`}>
         <li className={menu === "home" ? "active" : ""}>
           <AnchorLink className="anchor-link" offset={50} href="#home">
@@ -56,7 +58,8 @@ const Navbar = () => {
           </AnchorLink>
         </li>
       </ul>
-      
+
+      {/* Social Icons */}
       <div className="social-icons">
         <a href="https://github.com/GehanFonseka" target="_blank" rel="noopener noreferrer"><FaGithub /> </a>
         <a href="https://www.instagram.com/gehan_fonseka_?igsh=MWI3eDYzamx2bzIzYQ==" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>

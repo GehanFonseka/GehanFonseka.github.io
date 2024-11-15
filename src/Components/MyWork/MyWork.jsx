@@ -6,7 +6,7 @@ import project4_img from '../../assets/motor.png';
 
 
 import './MyWork.css';
-import theme_pattern from '../../assets/theme_pattern.svg';
+
 import arrow_icon from '../../assets/arrow_icon.svg';
 
 const mywork_data = [
@@ -46,7 +46,8 @@ const MyWork = () => {
         <div id='work' className='mywork'>
             <div className="mywork-title">
                 <h1>My Projects</h1>
-                <img src={theme_pattern} alt="Pattern" />
+                <p>Discover my projects, highlighting creative and impactful solutions.</p>
+        
             </div>
             <div className="mywork-container">
                 {mywork_data.map((work, index) => (

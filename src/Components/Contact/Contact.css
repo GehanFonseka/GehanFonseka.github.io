@@ -174,10 +174,10 @@
         justify-content: center;
         align-items: center;
         gap: 20px; /* Reduced gap between sections */
-        margin: 20px; /* Reduced margin to avoid too much spacing on smaller screens */
+        margin: 20px auto; /* Center the container and move it slightly to the left */
         padding: 20px;
-        width: 100%; /* Ensure full width */
-        height: 130vh; /* Full viewport height to help with vertical centering */
+        width: 90%; /* Adjust the width for a smaller container */
+        height: 150vh; /* Full viewport height to help with vertical centering */
         box-sizing: border-box; /* Prevent overflow */
     }
 

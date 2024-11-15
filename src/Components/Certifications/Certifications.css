@@ -103,37 +103,36 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 380px) {
     .certificate-grid {
-        grid-template-columns: repeat(2, 1fr); /* Display two columns in a row */
-        gap: 20px; /* Adjust the gap if needed */
+        grid-template-columns: 1fr; /* Display one column in a row */
+        gap: 15px; /* Reduce gap between items */
     }
 
     .certifications h1 {
-        font-size: 2rem;
-        margin-top: -35px;
+        font-size: 1.8rem; /* Adjust title size for smaller screens */
+        margin-top: -25px; /* Adjust the margin if needed */
     }
 
     .certifications p {
-        font-size: 1rem;
+        font-size: 0.9rem; /* Adjust paragraph font size */
     }
 
     .certificate-card {
         align-items: center; /* Ensure content stays centered in the card */
+        width: 100%; /* Ensure the card uses the full width */
     }
 
     .certificate-image {
-        width: 100%; /* Make the image take the full width of the card */
-        height: 230px; /* Set a fixed height for all images */
-        object-fit: cover; /* Crop the image to maintain aspect ratio */
+        width: 100%; /* Ensure the image takes up full width of its container */
+        height: auto; /* Let the image adjust its height proportionally */
+        object-fit: contain; /* Maintain aspect ratio without cropping */
         border-radius: 10px; /* Optional: Add rounded corners to the image */
     }
 
     .certificate-showmore {
-        padding: 15px 30px;
-        font-size: 1rem;
-        margin: 30px auto;
+        padding: 12px 25px; /* Adjust padding for smaller buttons */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        margin: 20px auto;
     }
 }
-
-

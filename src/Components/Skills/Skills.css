@@ -92,7 +92,7 @@
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: grayscale(0%);
     opacity: 0;
-    animation: fadeInIcons 0.8s ease-out forwards; /* Adding a fade-in animation for each icon */
+    animation: fadeInIcons 0.8s ease-out forwards, scaleUpDown 2s infinite ease-in-out; /* Adding a continuous scaling effect */
     animation-delay: calc(0.5s + (var(--i) * 0.1)); /* Staggered animation based on index */
 }
 
@@ -102,6 +102,19 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* Infinite scaling animation for icons */
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back down */
     }
 }
 
