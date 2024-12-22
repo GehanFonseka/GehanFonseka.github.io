@@ -61,14 +61,7 @@
 }
 
 /* Keyframes for typing effect */
-@keyframes typing {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
+
 
 /* Optional: Highlight the span elements with a different color */
 .hero h1 span {

@@ -2,7 +2,9 @@ import React from 'react';
 import project1_img from '../../assets/salon.png';
 import project2_img from '../../assets/lemon111.png';
 import project3_img from '../../assets/Cover2.png';
-import project4_img from '../../assets/motor.png';
+import project4_img from '../../assets/project8.png';
+import project5_img from '../../assets/project5.png';
+import project6_img from '../../assets/project6.png';
 
 
 import './MyWork.css';
@@ -33,13 +35,29 @@ const mywork_data = [
     },
     {
         w_no: 4,
+        w_name:"Go-Tours",
+        w_img: project6_img,
+        w_desc: "Go Tours is a web-based system for booking and managing travel packages, built with PHP, MySQL, offering secure PayPal transactions.",
+        w_link: "https://github.com/GehanFonseka/Go-Tours-and-Travel-Management-System-with-PayPal-Payment",
+    },
+
+    {
+        w_no: 5,
+        w_name:"AutoNation",
+        w_img:project5_img,
+        w_desc: "AutoNation is a Python and Django platform that streamlines car buying, selling, and services with an intuitive, user-friendly interface.",
+        w_link: "https://github.com/GehanFonseka/AutoNation-car-market-django",
+    },
+    {
+        w_no: 6,
         w_name: "MotorMart",
         w_img: project4_img,
         w_desc: "This project was developed using Java as part of the first-year, first-semester IWT project at SLIIT.",
         w_link: "https://github.com/GehanFonseka/Vehical-Spare-Parts-Shop---JAVA"
     },
  
-];
+];  
+
 
 const MyWork = () => {
     return (
