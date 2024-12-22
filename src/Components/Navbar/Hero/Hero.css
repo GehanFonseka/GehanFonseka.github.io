@@ -192,6 +192,7 @@
         text-align: center;
     }
 
+
     .hero-content {
         max-width: 100%;
         text-align: center;
@@ -199,6 +200,9 @@
         margin-top: 20px;
     }
 
+    .hero h1 {
+        font-size: 2.1rem;
+    }
     .hero-image-container {
         order: -1;
         width: 200px;
