@@ -14,53 +14,84 @@ import react1 from '../../assets/react1.png';
 import python from '../../assets/c1.png';
 import php from '../../assets/c2.png';
 import debug from '../../assets/c3.png';
+import test from  '../../assets/test.png';
+import aws from '../../assets/aws.png';
+import cloud from '../../assets/cloud.png';
+import cloud1 from '../../assets/cloud1.png';
 
 const certifications = [
+  { 
+    id: 5, 
+    title: "Front-End Developer Capstone", 
+    image: frontend, 
+    link: "https://www.coursera.org/account/accomplishments/verify/UYQZZ6RA116B"
+  },
+  {
+    id: 0,
+    title: "Software Testing & Quality Assurance",
+    image: test,
+    link : "https://udemy-certificate.s3.amazonaws.com/image/UC-cdec272e-8d02-40bf-a9b9-358e28ba08ff.jpg"
+  },
+  { 
+    id: 4, 
+    title: "Version Control", 
+    image: github, 
+    link: "https://www.coursera.org/account/accomplishments/verify/RCM04FAWFP06"
+  },
+  {
+    id: 1,
+    title: "Mastering AWS Serverless",
+    image: aws,
+    link : "https://www.udemy.com/certificate/UC-a0e5867f-8e96-44fc-a0ce-a22fb68c32fd/"
+  },
     { 
-      id: 1, 
+      id: 2, 
       title: "JavaScript OOP", 
       image: oop, 
       link: "https://www.udemy.com/certificate/UC-dd363551-1b11-4a45-8885-c00fa6595024/"
     },
     { 
-      id: 2, 
+      id: 3, 
       title: "Python For Beginners", 
       image: Python, 
       link: "https://drive.google.com/file/d/1hzCTpjuCAkkbDKew-XzLxLH4NezNmhSf/view"
     },
+   
+  
     { 
-      id: 3, 
-      title: "Version Control", 
-      image: github, 
-      link: "https://www.coursera.org/account/accomplishments/verify/RCM04FAWFP06"
-    },
-    { 
-      id: 4, 
-      title: "Front-End Developer Capstone", 
-      image: frontend, 
-      link: "https://www.coursera.org/account/accomplishments/verify/UYQZZ6RA116B"
-    },
-    { 
-      id: 5, 
+      id: 6, 
       title: "React Basics", 
       image: react, 
       link: "https://www.coursera.org/account/accomplishments/verify/ADJRPGR1975F?"
     },
     { 
-      id: 6, 
+      id: 7, 
+      title: "Cloud Computing Essentials", 
+      image: cloud, 
+      link: "https://udemy-certificate.s3.amazonaws.com/image/UC-36d2a9a6-1992-43f6-a84f-de96d48268a4.jpg"
+    },
+    { 
+      id: 8, 
+      title: "Internet & Cloud Computing ", 
+      image: cloud1, 
+      link: "https://udemy-certificate.s3.amazonaws.com/image/UC-4e6e0fd5-f733-4bbf-85fe-897dcc67033c.jpg"
+    },
+
+    { 
+      id: 7, 
       title: "Tailwind CSS Bootcamp", 
       image: css, 
       link: "https://verify.letsupgrade.in/certificate/LUETCMAR124989" 
     },
   
     {
-      id: 7,
+      id: 8,
       title: "Python & Django",
       image: python,
       link : "https://www.udemy.com/certificate/UC-96eba1ca-88e0-4b5d-8d10-22848b64c154/"
     },
     { 
-      id: 8, 
+      id: 9, 
       title: "Postman API Student Expert", 
       image: api, 
       link: "https://badgr.com/public/assertions/NzrwliGIQv6OkjCjp22fGQ" 
@@ -96,6 +127,7 @@ const certifications = [
       image: react1, 
       link: "https://verify.letsupgrade.in/certificate/LUERJSJUL124427" 
   },
+
   
     // Add more certificates if needed
 ];
