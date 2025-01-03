@@ -8,7 +8,7 @@ const Hero = () => {
     <div id="home" className="hero">
       <div className="hero-content">
         <h1><span>I'm Gehan Fonseka,</span><br></br> Software Developer.</h1>
-        <p>I am an undergraduate software engineer with proficiency in frameworks such as React and Node.js. I also have hands-on experience with programming languages including Python, Java, C, and C++. As a quick learner, I am constantly seeking opportunities to enhance my skills and grow professionally. I am eager to leverage my expertise to contribute positively and advance my career in the field of Information Technology.</p>
+        <p>I am an undergraduate software developer with proficiency in frameworks such as React and Node.js. I also have hands-on experience with programming languages including Python, Java, C, and C++. As a quick learner, I am constantly seeking opportunities to enhance my skills and grow professionally. I am eager to leverage my expertise to contribute positively and advance my career in the field of Information Technology.</p>
         <div className="hero-action">
           <AnchorLink className="hero-connect" offset={50} href="#contact">
             Connect With Me
