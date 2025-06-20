@@ -169,12 +169,18 @@ const Certifications = () => {
                     </a>
                 ))}
             </div>
-            {!showAll && (
-                <button className="certificate-showmore" onClick={() => setShowAll(true)}>
-                    <span>Show More</span> 
-                    <img src={arrow_icon} alt="Arrow Icon" className="arrow" />
-                </button>
-            )}
+            {showAll ? (
+  <button className="certificate-showmore" onClick={() => setShowAll(false)}>
+    <span>Show Less</span>
+    <img src={arrow_icon} alt="Arrow Icon" className="arrow arrow-rotate" />
+  </button>
+) : (
+  <button className="certificate-showmore" onClick={() => setShowAll(true)}>
+    <span>Show More</span>
+    <img src={arrow_icon} alt="Arrow Icon" className="arrow" />
+  </button>
+)}
+
         </div>
     );
 };

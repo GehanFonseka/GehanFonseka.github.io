@@ -105,18 +105,7 @@
     }
 }
 
-/* Infinite scaling animation for icons */
-@keyframes scaleUpDown {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2); /* Scale up */
-    }
-    100% {
-        transform: scale(1); /* Scale back down */
-    }
-}
+
 
 /* Hover effect on icons */
 .icon-grid img:hover {
@@ -163,7 +152,7 @@
     }
 
     .icon-grid {
-        grid-template-columns: repeat(3, 1fr); /* Display 3 columns on smaller mobile screens */
+        grid-template-columns: repeat(4, 1fr); /* Display 3 columns on smaller mobile screens */
         gap: 10px;
     }
 

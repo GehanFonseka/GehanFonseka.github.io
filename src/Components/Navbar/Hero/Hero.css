@@ -26,89 +26,31 @@
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 15px;
-    color: #333333; /* Dark neutral color for the text */
+    margin-bottom: 5px;
+    color: #ffffff;
     display: inline-block;
     text-align: left;
     position: relative;
-    animation: pulseColor 3s ease-in-out infinite, scalePulse 2s ease-in-out infinite, typing 4s steps(40) 1s forwards; /* Combined animations */
 }
 
-/* Keyframes for the pulse effect */
-@keyframes pulseColor {
-    0% {
-        color: #333333; /* Dark grey */
-    }
-    50% {
-        color: #f8fdf9; /* Soft Green */
-    }
-    100% {
-        color: #333333; /* Dark grey */
-    }
-}
-
-/* Keyframes for the scale pulse effect */
-@keyframes scalePulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* Slightly larger */
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Keyframes for typing effect */
-
-
-/* Optional: Highlight the span elements with a different color */
+/* Span name highlight */
 .hero h1 span {
-    color: #00b4d8; /* Light blue */
-    animation: colorChange 3s ease-in-out infinite; /* Animated color change on span */
+    color: #00b4d8;
     font-size: 3.5rem;
 }
 
-/* Keyframes for span color change */
-@keyframes colorChange {
-    0% {
-        color: #00b4d8; /* Light blue */
-    }
-    50% {
-        color: #f8fdf9; /* Soft Green */
-    }
-    100% {
-        color: #00b4d8; /* Light blue */
-    }
-}
-
-/* Hero section cool underline animation */
-.hero h1::after {
-    content: '';
-    position: absolute;
+/* Typing text (no animation, white font) */
+.typing-text {
+    color: #ffffff !important;
+    font-size: 2.6rem;
+    font-weight: 500;
+    margin-top: 2px;
+    min-height: 55px;
+    text-align: left;
     width: 100%;
-    height: 4px;
-    background-color: #00b4d8;
-    bottom: -8px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    animation: underline 1s ease-out forwards;
 }
 
-/* Keyframes for the underline effect */
-@keyframes underline {
-    0% {
-        transform: scaleX(0);
-        transform-origin: bottom left;
-    }
-    100% {
-        transform: scaleX(1);
-        transform-origin: bottom right;
-    }
-}
-
+/* Paragraph */
 .hero p {
     font-size: 1.3rem;
     line-height: 1.6;
@@ -117,8 +59,20 @@
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;
     animation-delay: 1s;
+    text-align: left;
 }
 
+/* FadeIn Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Action Buttons */
 .hero-action {
     display: flex;
     gap: 20px;
@@ -126,20 +80,24 @@
 }
 
 .hero-connect, .hero-resume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px 25px;
     font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: 150px;
+    height: 45px;
+    text-align: center;
 }
 
 .hero-connect {
     color: #ffffff;
     background-color: #00b4d8;
     border: none;
-    width: 150px;
-    text-align: center;
 }
 
 .hero-connect:hover {
@@ -150,9 +108,6 @@
     color: #e0e0e0;
     background: none;
     border: 2px solid #e0e0e0;
-    width:140px;
-    text-align: center;
-    
 }
 
 .hero-resume:hover {
@@ -160,7 +115,7 @@
     border-color: #00b4d8;
 }
 
-/* Updated Image Styling */
+/* Image Styling */
 .hero-image-container {
     position: relative;
     width: 310px;
@@ -170,16 +125,21 @@
     justify-content: center;
     overflow: hidden;
     padding: 10px;
-    border: 3px solid #00b4d8; /* Blue border around the container */
-    border-radius: 15px; /* Rounded corners */
+    border: 3px solid #00b4d8;
+    border-radius: 15px;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9; /* Increase transparency */
-    border-radius: 10px; /* Rounded corners */
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+/* Responsive line break */
+.mobile-break {
+    display: none;
 }
 
 /* Mobile Responsive */
@@ -192,17 +152,30 @@
         text-align: center;
     }
 
-
     .hero-content {
         max-width: 100%;
-        text-align: center;
         padding-right: 0;
         margin-top: 20px;
+        text-align: left;
     }
 
     .hero h1 {
-        font-size: 2.1rem;
+        font-size: 2.5rem;
+        font-weight: 700;
     }
+
+    .hero h1 span {
+        font-size: 3.5rem;
+    }
+
+    .typing-text {
+        font-size: 2.6rem;
+        font-weight: 500;
+        text-align: left;
+        width: 100%;
+        margin-left: 0;
+    }
+
     .hero-image-container {
         order: -1;
         width: 200px;
@@ -218,57 +191,45 @@
         height: 115%;
         object-fit: cover;
         opacity: 0.9;
-        gap: 10px;
     }
 
     .hero p {
-        font-size: 1.1rem;    
-                /* Adjust font size */
-        line-height: 1.8;               /* Increase line height for more vertical spacing */
-        max-width: 90%;                 /* Limit text width for better readability */
-        margin: 20px 0;                 /* Increased margin for better spacing */
-        opacity: 0;                     /* Fade-in effect (starts hidden) */
+        font-size: 1.2rem;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 20px 0;
+        opacity: 0;
         animation: fadeIn 1.5s ease forwards;
         animation-delay: 1s;
-        text-align: center;             /* Center the text */
-        padding: 0 15px;                /* Add horizontal padding for better spacing on small screens */
+        padding: 0 15px;
+        text-align: left;
     }
-    
-    /* Keyframes for fade-in animation */
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    
 
     .hero-action {
         display: flex;
-        justify-content: center; /* Centers buttons horizontally */
-        align-items: center;     /* Aligns buttons vertically */
-        gap: 10px;               /* Space between the buttons */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
         margin-top: 25px;
-        width: 100%;             /* Ensure container spans full width */
+        width: 100%;
     }
 
     .hero-connect, .hero-resume {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.1rem;
         padding: 10px 25px;
         border-radius: 30px;
-        cursor: pointer;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        width: 100%;              /* Both buttons take up 100% width */
+        width: 100%;
+        height: 40px;
+        text-align: center;
     }
 
     .hero-connect {
         background-color: #00b4d8;
         color: #ffffff;
         border: none;
-        height: 40px;
     }
 
     .hero-connect:hover {
@@ -281,12 +242,19 @@
         color: #ffffff;
         background: transparent;
         border: 2px solid #ffffff;
-        height: 40px;
     }
 
     .hero-resume:hover {
         color: #00b4d8;
         border-color: #00b4d8;
         transform: translateY(-3px);
+    }
+
+    .mobile-break {
+        display: inline;
+    }
+
+    .no-wrap {
+        white-space: nowrap;
     }
 }

@@ -101,6 +101,11 @@
 .certificate-showmore:hover .arrow {
     transform: translateX(5px);
 }
+.arrow-rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+  
 /* Mobile Responsive */
 /* Mobile Responsive */
 @media (max-width: 768px) {

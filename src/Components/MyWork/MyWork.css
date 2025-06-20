@@ -14,7 +14,7 @@
 /* Title Styling */
 .mywork-title {
     position: relative;
-    margin-top: -5px;;
+    margin-top: -5px;
 }
 
 .mywork-title h1 {
@@ -22,14 +22,16 @@
     margin-bottom: 15px;
     color: #ffffff;
     text-align-last: center;
-    animation: slideUpFadeIn 1.2s ease forwards, pulse 2.5s ease-in-out infinite;
+    /* Removed animation for professionalism */
 }
+
 .certifications p {
     font-size: 1.2rem;
     color: #c0c0c0;
     margin-bottom: 40px;
     justify-content: center;
 }
+
 .mywork-title img {
     position: absolute;
     bottom: -10px;
@@ -37,7 +39,7 @@
     width: 150px;
     z-index: -1;
     opacity: 0.6;
-    margin-top: -5px;;
+    margin-top: -5px;
 }
 
 /* Work Container */
@@ -60,9 +62,9 @@
     text-decoration: none;
     color: #ffffff;
     display: flex;
-    flex-direction: column; /* To make sure the content inside the card stacks vertically */
-    transition: all 0.3s ease-in-out; /* Smooth transition for the hover effects */
-    margin-top: -10px;;
+    flex-direction: column; /* Stack content vertically */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    margin-top: -10px;
 }
 
 /* Card Hover Effect */
@@ -76,28 +78,27 @@
 .project-image {
     width: 100%;
     height: auto;
-    border-radius: 15px 15px 0 0; /* Matching rounded corners */
+    border-radius: 15px 15px 0 0; /* Rounded corners */
     transition: transform 0.3s ease; /* Smooth scale transition */
 }
 
 /* Image Hover Effect */
 .mywork-card:hover .project-image {
-    transform: scale(1.05); /* Slightly zooms in the image */
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 /* Project Details Styling */
 .project-details {
     padding: 20px;
     background-color: #000000; /* Full black background */
-    border-radius: 0 0 15px 15px; /* Matches card's border-radius */
-    flex-grow: 1; /* Ensures this section fills available space */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    flex-grow: 1; /* Fill remaining space */
 }
 
 .project-details h2 {
     font-size: 1.5rem;
     margin: 0;
     color: #00b4d8;
-    
 }
 
 .project-details p {
@@ -110,33 +111,58 @@
     font-size: 1.2rem;
     color: #c0c0c0;
     margin-bottom: -5px;
-    
 }
-/* Show More Button */
+
 .mywork-showmore {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 15px 40px;
-    font-size: 1.1rem;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 1rem;
     font-weight: 500;
     color: #ffffff;
     background-color: transparent;
-    border: 2px solid #00b4d8;
+    border: 1px solid #00b4d8;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+    text-decoration: none;
 }
+
+
 
 .mywork-showmore:hover {
     background-color: #00b4d8;
-    color: #ffffff;
-    padding: 15px 50px;
+    transform: translateY(-2px);
 }
+
+
 
 .mywork-showmore p {
     font-size: medium;
+}
+
+/* Rotate arrow when active */
+
+
+.mywork-showmore img {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.arrow-rotate {
+    transform: rotate(180deg);
+}
+
+.mywork-showmore:hover img {
+    transform: translateX(5px);
+}
+
+.mywork-showmore.rotate-arrow img {
+    transform: rotate(180deg);
 }
 
 /* Responsive Styling */
@@ -145,17 +171,16 @@
         gap: 50px;
         margin: 40px 20px;
         align-items: center;
-        background-color: #1a1a1a; /* Ensures full black background on mobile */
-        padding-bottom: 0; /* Remove bottom padding */
+        background-color: #1a1a1a;
+        padding-bottom: 0;
     }
 
     .mywork-title h1 {
-        font-size: 2rem;;
-        
+        font-size: 2rem;
     }
 
     .mywork p {
-        font-size: 0.9rem; /* Adjust paragraph font size */
+        font-size: 0.9rem;
         text-align: center;
     }
 
@@ -164,19 +189,40 @@
         right: -10px;
     }
 
+    /* ONE column on mobile */
     .mywork-container {
-        grid-template-columns: 1fr ;
+        grid-template-columns: 1fr;  /* Only one column */
         gap: 20px;
+        width: 100%;
     }
-
+    
     .mywork-showmore {
-        padding: 15px 30px;
-        font-size: 1rem;
+        padding: 10px 22px;
+        font-size: 0.9rem;
         margin: 30px auto;
     }
 
-    /* Adjust project details background to full black */
     .project-details {
         background-color: #000000; /* Full black background */
     }
 }
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .mywork-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .mywork p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    /* ONE column on smaller mobile too */
+    .mywork-container {
+        grid-template-columns: 1fr;  /* One column */
+        gap: 15px;
+        width: 100%;
+    }
+}
+
