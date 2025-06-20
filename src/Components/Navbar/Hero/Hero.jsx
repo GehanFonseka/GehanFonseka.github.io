@@ -4,7 +4,7 @@ import profile_img from '../../../assets/dp10-img.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Hero = () => {
-  const titles = ['Software Developer', 'DevOps Engineer'];
+  const titles = ['Software Engineer', 'DevOps Engineer'];
   const typingSpeed = 120;
   const deletingSpeed = 60;
   const delayBetween = 1500;
