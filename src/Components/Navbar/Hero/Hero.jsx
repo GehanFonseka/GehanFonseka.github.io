@@ -54,7 +54,7 @@ const Hero = () => {
             Connect With Me
           </AnchorLink>
           <a
-  href="/Gehan Kaushalya Fonseka-1.pdf"
+  href="/Gehan Fonseka.pdf"
   className="hero-resume"
   target="_blank"
   rel="noopener noreferrer"
