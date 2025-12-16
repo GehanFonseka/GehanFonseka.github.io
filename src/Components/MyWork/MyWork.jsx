@@ -4,15 +4,17 @@ import './MyWork.css';
 
 import project1_img from '../../assets/salon.png';
 import project2_img from '../../assets/lemon111.png';
-import project3_img from '../../assets/Cover2.png';
+import project3_img from '../../assets/studybuddy.png';
 import project4_img from '../../assets/project8.png';
 import project5_img from '../../assets/project5.png';
 import project6_img from '../../assets/project6.png';
 import project8_img from '../../assets/FinFlow.png';
 import project9_img from '../../assets/skilledge.png';
 import arrow_icon from '../../assets/arrow_icon.svg';
+import project7_img from '../../assets/taskpro2.png';
 
 const mywork_data = [
+  
     {
         w_no: 2,
         w_name:"AutoNation",
@@ -49,6 +51,13 @@ const mywork_data = [
         w_img: project2_img,
         w_desc: "Little Lemon is a family-owned Mediterranean restaurant. This booking application was developed as the final capstone project for the Meta Front-End Developer Certification.",
         w_link: "https://github.com/GehanFonseka/Little-Lime-Meta-Frontend"
+    },
+      {
+        w_no: 8,
+        w_name: "TaskPro",
+        w_img: project7_img,
+        w_desc: "Cloud-native task management system on GCP demonstrating CI/CD automation, Docker, Kubernetes, secure deployment, monitoring, and enterprise-grade DevOps practices.",
+        w_link: "https://github.com/GehanFonseka/Devops-Task-App"
     },
     {
         w_no: 6,

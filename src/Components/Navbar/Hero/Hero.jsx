@@ -46,7 +46,7 @@ const Hero = () => {
         <h2 className="typing-text">{text}</h2>
         <br></br>
         <p>
-         I am an enthusiastic undergraduate software developer with a strong foundation in computer science, programming, and DevOps. Proficient in frameworks like React and Node.js, and experienced in Python, Java, C++. I'm a quick learner and I am always looking for opportunities to learn and grow as a developer, and I am excited to use my skills to make a positive impact and continue my career in the field of Information Technology.
+         I am an enthusiastic undergraduate specializing in DevOps, with a strong foundation in software engineering and computer science. I have hands-on experience with CI/CD automation, containerization, and cloud-based deployment workflows, alongside practical development experience using React, Node.js, Python, Java, and C++. I am passionate about building and deploying scalable, reliable applications by effectively bridging development and operations. As a fast learner committed to continuous improvement, I am eager to contribute to real-world projects and grow within the Information Technology industry.
         </p>
         <br></br>
         <div className="hero-action">

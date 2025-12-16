@@ -11,7 +11,7 @@ const Skills = () => {
     return (
         <div id='Skills' className='Skills'>
             <h1>Tools, Languages & Frameworks</h1>
-            <p>Never miss a task, deadline, or idea</p>
+            <p></p>
             <div className="icon-grid">
                 {/* Frontend & Languages */}
                 <img src={htmlIcon} alt="HTML" title="HTML" />

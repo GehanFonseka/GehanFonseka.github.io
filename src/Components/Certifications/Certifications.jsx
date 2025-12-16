@@ -18,14 +18,24 @@ import test from  '../../assets/test.png';
 import aws from '../../assets/aws.png';
 import cloud from '../../assets/cloud.png';
 import cloud1 from '../../assets/cloud1.png';
+import network from '../../assets/network.png';
 
 const certifications = [
+
   { 
     id: 5, 
     title: "Front-End Developer Capstone", 
     image: frontend, 
     link: "https://www.coursera.org/account/accomplishments/verify/UYQZZ6RA116B"
   },
+
+  {
+    id: 14,
+    title: "  Multicloud Network Associate",
+    image: network,
+    link : "https://www.credly.com/badges/ca5590e3-990a-4154-adcb-0256e107d10a/linked_in_profile"
+  },
+  
   {
     id: 0,
     title: "Software Testing & Quality Assurance",
